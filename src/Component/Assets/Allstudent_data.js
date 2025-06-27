@@ -1,0 +1,62 @@
+const studentMarks = [
+  {
+    name: "Rahul Sharma",
+    dob: "2007-04-15",
+    gender: "Male",
+    bloodGroup: "B+",
+    nationality: "Indian",
+    religion: "Hindu",
+    caste: "General",
+    aadhaar: "123456789012",
+    phone: "9876543210",
+    email: "rahul.sharma@example.com",
+    presentAddress: "123 Green Street, Delhi",
+    guardianName: "Ramesh Sharma",
+    guardianPhone: "9123456789",
+    rollNo: "101",
+    admissionNo: "ADM2023001",
+    class: "10",
+    section: "A",
+    yearOfAdmission: "2023",
+    schoolName: "Delhi Public School",
+    imageUrl:
+      "https://res.cloudinary.com/dnarxeess/image/upload/v1721718973/sadik_x7up8d.jpg",
+
+    marks: {
+      Math: 85,
+      Science: 78,
+      English: 90,
+      Social_Science: 80,
+      Hindi: 88,
+      Computer: 92,
+      percentage: 85.5,
+      grade: "A",
+    },
+    result: {
+      total_marks: 511,
+      percentage: 85.17,
+      grade: "A",
+    },
+    attendance: {
+      April: {
+        total_days: 30,
+        active: 14,
+        absent: 12,
+      },
+      May: {
+        total_days: 31,
+        active: 22,
+        absent: 7,
+      },
+      June: {
+        total_days: 30,
+        active: 25,
+        absent: 3,
+      },
+      cumulative_percentage: 67.03,
+    },
+    totalPresent: 61,
+    totalAbsent: 4,
+    percentage: 93.85,
+  },
+];
