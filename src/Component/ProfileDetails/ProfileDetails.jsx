@@ -4,6 +4,7 @@ import StudentBio from "../StudentBio/StudentBio";
 import { useContext } from "react";
 import { StudentContext } from "../../Context/StudentContext";
 import Marks from "../Marks/Marks";
+import Attendance from "../Attendance/Attendance";
 
 
 const ProfileDetails = () => {
@@ -14,6 +15,7 @@ const ProfileDetails = () => {
     <div>
       <StudentBio student={student}/>
       <Marks student={student}/>
+      <Attendance student={student}/>
     </div>
   );
 };

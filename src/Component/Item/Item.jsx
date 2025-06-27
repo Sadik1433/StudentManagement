@@ -1,30 +1,22 @@
-import { useState } from "react";
 import "./Item.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ details }) => {
-  const [attendance, setAttendance] = useState(false);
-  const { name, Roll } = details;
-
-  const handleToggle = () => {
-    setAttendance((prev) => !prev);
-    console.log(attendance);
-  };
-
+const Item = (props) => {
+  const { student } = props;
   return (
-    <div className="item-container">
-      <div className="item-content">
-        <span className="roll-no">{Roll}.</span>
-        <p className="stu-name">{name}</p>
-        <div className="checkbox-container">
-          <button
-            onClick={handleToggle}
-            className={`status ${attendance ? "present" : "absent"}`}
-          >
-            {attendance ? "Present" : "Absent"}
-          </button>
+    <Link to={`/student/${student.id}`}  className="link-tag">
+      <div className="item-container">
+        <div className="stu-img-container">
+          <img src={student.image} alt={student.name} className="stu-img" />
+        </div>
+        <div className="attend-data-container">
+          <h4>Name:-{student.name}</h4>
+          <p>Roll No:- {student.rollno}</p>
+          <p>Class:- {student.class}</p>
+          <p>Section:- {student.section}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

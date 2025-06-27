@@ -2,18 +2,47 @@
   min-height: 100vh;
   position: relative;
   top: 70px;
+  padding-bottom: 50px;
+}
+.profile-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-bottom: 50px;
+}
+.student-list-heading {
+  width: 200px;
+  color: #007bff;
+  font-weight: 900;
+  font-size: 30px;
+}
+.profile-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* yet to be complete */
+.filter-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.filter-tab{
+  width: 60px;
+  outline: none;
+  background-color: #f0f0f0;
 }
 .card {
   max-width: 250px;
   min-width: 190px;
   height: 250px;
-  background: #EFEFEF;
+  background: #efefef;
   list-style-type: none;
   text-decoration: none;
   border-radius: 15px;
@@ -31,7 +60,7 @@
 
 .card span {
   font-weight: 500;
-  color:  #100a886b;
+  color: #100a886b;
   text-align: center;
   display: block;
   padding-top: 10px;
@@ -54,6 +83,12 @@
   margin: auto;
   margin-top: 10px;
 }
+.student-list-heading {
+  text-align: center;
+  padding: 5px 0px;
+  color: #534bf3;
+  /* border-bottom: 1px solid grey; */
+}
 
 .card .profile-btn {
   padding: 8px 25px;
@@ -71,6 +106,6 @@
 .card button:hover {
   background: #534bf3;
 }
-.link-tag{
+.link-tag {
   text-decoration: none;
 }
