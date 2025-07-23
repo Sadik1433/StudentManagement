@@ -31,14 +31,6 @@ const Header = () => {
         >
           <IoLogOutOutline />
         </NavLink>
-         <NavLink
-          to="/marks"
-          className={({ isActive }) =>
-            isActive ? "link-tab active" : "link-tab"
-          }
-        >
-          <IoLogOutOutline />
-        </NavLink>
       </div>
     </nav>
   );

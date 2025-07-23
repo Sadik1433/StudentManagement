@@ -1,23 +1,41 @@
 import "./CssFile/Profile.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { StudentContext } from "../Context/StudentContext";
 
 const Profile = () => {
   const { students_data } = useContext(StudentContext);
+  const [searchclass, setSearchTerm] = useState("");
+  const [classFilter, setClassFilter] = useState("");
 
+  const filteredStudents = students_data.filter((student) => {
+    return (
+      (classFilter === "" || student.class === classFilter) &&
+      student.name.toLowerCase().includes(searchclass.toLowerCase())
+    );
+  });
   return (
     <div className="profile-page">
       <div className="profile-header">
-        <h5 className="student-list-heading">StudentsList</h5>
+      <h1 className="student-list">Student Lists</h1>
         <div className="filter-container">
-          <select className="filter-tab">
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={searchclass}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="name-input"
+          />
+          <select
+            value={classFilter}
+            onChange={(e) => setClassFilter(e.target.value)}
+            className="select-filter"
+          >
+            <option value="" className="class-option">All Classes</option>
+            <option value="8" className="class-option">Class 8</option>
+            <option value="9" className="class-option">Class 9</option>
+            <option value="10" className="class-option">Class 10</option>
           </select>
           <Link to="/add-student" className="add-link">
             <button className="add-btn">
@@ -27,8 +45,8 @@ const Profile = () => {
         </div>
       </div>
       <div className="profile-container">
-        {students_data.map((profile, id) => (
-          <li className="card">
+        {filteredStudents.map((profile, id) => (
+          <li className="card" key={id}>
             <div className="card-border-top"></div>
             <div className="img-container">
               <img

@@ -1,7 +1,7 @@
 let students_data = [
   {
     id: 1,
-    name: "Student 1",
+    name: "Sadik",
     admission_number: "ADM1001",
     gender: "female",
     rollno: 1,

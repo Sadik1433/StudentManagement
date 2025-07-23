@@ -6,13 +6,13 @@ const stuData = [
     id: 1,
     name: "Student List",
     description: "View and edit student profile information.",
-    link: "/student",
+    link: "/marks",
   },
   {
     id: 2,
-    name: "Exam Schedules",
+    name: "Attendance",
     description: "View exam schedules and results.",
-    link: "/exams",
+    link: "/attend",
   },
   {
     id: 3,

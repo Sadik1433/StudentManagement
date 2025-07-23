@@ -1,0 +1,45 @@
+.attendForm-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.date-input{
+  max-width: 90px;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+.attend-btn-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.save {
+  background-color: rgba(0, 0, 255, 0.801);
+}
+.attend-student-list {
+  padding: 10px 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.attend-each-student {
+  list-style-type: decimal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.attend-btn {
+  padding: 5px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: #f0f0f0;
+}
+.present {
+  background-color: green;
+}
+.absent {
+  background-color: red;
+}

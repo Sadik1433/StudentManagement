@@ -1,0 +1,27 @@
+.monthly-attendance-view{
+    background-color: aqua;
+    padding: 10px;
+}
+.monthly-attendance-view h2 {
+    text-align: center;
+    color: darkblue;
+}
+.monthly-attendance-view select {
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid transparent;
+    outline: none;
+}
+.monthly-table{
+    overflow-x: auto;
+    margin-top: 20px;
+}
+.monthly-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.monthly-table th, .monthly-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
