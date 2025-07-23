@@ -7,6 +7,7 @@ import Login from "./Pages/Login.jsx";
 import SignUp from "./Pages/SignUp.jsx";
 import About from "./Pages/About.jsx";
 import Attendance from "./Pages/Attendance.jsx";
+import StudentManagement from "./Pages/StudentManagement.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/attend" element={<Attendance />} />
+        <Route path="/students" element={<StudentManagement />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

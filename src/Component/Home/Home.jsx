@@ -6,7 +6,7 @@ const stuData = [
     id: 1,
     name: "Student List",
     description: "View and edit student profile information.",
-    link: "/marks",
+    link: "/students",
   },
   {
     id: 2,

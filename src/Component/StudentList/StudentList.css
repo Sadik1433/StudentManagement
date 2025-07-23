@@ -1,0 +1,54 @@
+.student-list-container{
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.student-list-container > div {
+    margin-bottom: 20px;
+}
+.student-list-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+.student-list-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.student-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px 20px;
+}
+.student-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.student-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+}
+.student-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1rem;
+}
+.student-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.student-card button:hover {
+    background-color: #0056b3;
+}

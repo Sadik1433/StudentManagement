@@ -1,0 +1,29 @@
+.StudentManagementContainer{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.StudentManagementContainer h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}   
+.StudentManagementContainer .student-list {
+    margin-top: 10px;
+}
+.AddStudentButtonContainer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.AddStudentButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
