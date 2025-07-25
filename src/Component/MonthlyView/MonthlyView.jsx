@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./MonthlyView.css";
+import { StudentContext } from "../../Context/StudentContext";
 
-const MonthlyView = ({ attendanceRecords, students }) => {
+const MonthlyView = () => {
+  
+  const {attendanceRecords, students} = useContext(StudentContext);
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
 

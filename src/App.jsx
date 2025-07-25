@@ -8,6 +8,8 @@ import SignUp from "./Pages/SignUp.jsx";
 import About from "./Pages/About.jsx";
 import Attendance from "./Pages/Attendance.jsx";
 import StudentManagement from "./Pages/StudentManagement.jsx";
+import MonthlyView from "./Component/MonthlyView/MonthlyView.jsx";
+
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/attend" element={<Attendance />} />
         <Route path="/students" element={<StudentManagement />} />
+        <Route path="/monthlyView" element={<MonthlyView />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

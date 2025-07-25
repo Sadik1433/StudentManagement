@@ -20,7 +20,7 @@ const AddStudentForm = ({ onAdd, onCancel }) => {
 
     const newStudent = {
       ...formData,
-      id: Date.now(), // use timestamp for unique ID
+      id: Date.now(),
     };
 
     onAdd(newStudent);

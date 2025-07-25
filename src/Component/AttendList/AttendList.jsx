@@ -1,6 +1,7 @@
 import "./AttendList.css";
 
 const AttendanceList = ({ records }) => {
+  
   return (
     <div className="attend-lists-container">
       <h2>Attendance Records</h2>
@@ -9,8 +10,12 @@ const AttendanceList = ({ records }) => {
       ) : (
         records.map((entry, i) => (
           <div key={i} className="attend-list-display">
-            <h3 className="attend-list-date">Date: {entry.date}</h3>
-            <table className="">
+            <h3 className="attend-list-date">Date: {new Date(entry.date).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  })}</h3>
+            <table className="present-table-data">
               <thead className="attend-table-head">
                 <tr>
                   <th>R.No</th>
@@ -21,9 +26,11 @@ const AttendanceList = ({ records }) => {
               <tbody>
                 {entry.records.map((r, j) => (
                   <tr key={j}>
-                    <td>{j+1}</td>
+                    <td >{j+1}</td>
                     <td >{r.studentName}</td>
-                    <td >{r.status}</td>
+                    <td  className={`result ${
+                r.status === "Present" ? "stupresent" : "stuabsent"
+              }`}>{r.status}</td>
                   </tr>
                 ))}
               </tbody>

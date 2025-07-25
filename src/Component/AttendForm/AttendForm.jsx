@@ -39,10 +39,10 @@ const AttendForm = ({ students, onSubmit }) => {
         <button className="attend-btn save">Save Attendance</button>
       </div>
       <div className="attend-student-list">
-        {students.map((student) => (
+        {students.map((student, i) => (
           <div key={student.id} className="attend-each-student">
             <span>
-              {student.id} . {student.name}
+              {i+1} . {student.name}
             </span>
             <button
               type="button"
