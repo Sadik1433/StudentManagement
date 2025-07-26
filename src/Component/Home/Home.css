@@ -1,10 +1,9 @@
 .Home-container {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   top: 0px;
-  margin: 20px auto;
-  color: #333;
-  background-color: #f0f0f0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -12,7 +11,7 @@
 }
 .home-header{
   text-align: center;
-  color: #2D5C7F;
+  color: var(--head-color);
 }
 .home-list {
   padding: 20px;
@@ -23,7 +22,9 @@
 }
 .home-item {
   height: 200px;
-  width: 250px;
+  min-width: 250px;
+  padding: 10px 20px;
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -33,13 +34,12 @@
 .item-head {
   text-align: center;
   font-weight: bold;
-  color: #2D5C7F;
   font-size: 30px;
-  /* text-decoration: 1px underline grey; */
+  color: var(--head-color);
 }
 .item-desc {
   text-align: center;
-  color: #0E2148;
+  color: var(--card-text-color);
     font-weight: 900;
   font-size: 16px;
 }

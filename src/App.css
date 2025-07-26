@@ -4,8 +4,16 @@
   box-sizing: border-box;
   font-family: sans;
 }
+:root{
+  --bg-color: rgba(139, 139, 243, 0.699);
+  --text-color: rgb(179, 250, 255);
+  --btn-color: rgba(46, 124, 226, 0.76);
+  --btn-danger-color: red;
+  --head-color: rgb(47, 13, 240);
+  --card-color: whiteSmoke;
+  --card-text-color: rgb(7, 84, 114);
+}
 body {
   overflow: hidden;
   overflow-y: scroll;
-  background-color: #f1f1f1;
 }

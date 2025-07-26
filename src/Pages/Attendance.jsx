@@ -27,10 +27,8 @@ const Attendance = () => {
         </button>
         </Link>
       </div>
-      <div className="attend-display">
       <div className="attendance-form-container">
         <AttendList records={attendanceRecords} />
-      </div>
       </div>
       <div className={`sidebar ${isOpen ? "open" : "collapsed"}`}>
         <AttendForm students={students} onSubmit={handleAttendanceSubmit} />

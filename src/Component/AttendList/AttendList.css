@@ -1,35 +1,48 @@
-.attend-lists-container{
-    text-align: center;
-    padding: 10px 20px;
+.attend-lists-page {
+  padding: 10px 20px;
 }
-.attend-list-display{
-    width: 100%;
+.attend-lists-container {
+  display: flex;
+  flex-wrap: wrap;
 }
-.attend-list-date{
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.attend-lists-page h1 {
+  text-align: center;
+  color: var(--head-color);
+  margin-bottom: 20px;
 }
-.attend-list-date{
-    color: turquoise;
+.attend-list-display {
+  max-width: 430px;
+  /* border-right: 2px solid grey; */
+  padding: 0px 10px;
+  margin-bottom: 20px;
 }
-table{
-    width: 400px;
-    font-size: 20px;
+.attend-list-date {
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--card-color);
 }
-th{
-    color: blue;
+table {
+  width: 400px;
+  font-size: 20px;
+  text-align: center;
 }
-td{
+th {
+    font-size: 26px;
+    color: var(--head-color); 
+    border: 1px solid grey;
+}
+td {
     padding: 5px;
+    color: var(--text-color);
+    border: 1px solid grey;
 }
-.stuabsent{
-    font-size: 20px;
-    font-weight: 900; 
-    color: red;
+.stuabsent {
+  font-size: 20px;
+  font-weight: 900;
+  color: red;
 }
-.stupresent{
-    font-size: 20px;
-    font-weight: 900;
-    color: green;
+.stupresent {
+  font-size: 20px;
+  font-weight: 900;
+  color: green;
 }

@@ -36,7 +36,7 @@ const AttendForm = ({ students, onSubmit }) => {
           required
           className="date-input"
         />
-        <button className="attend-btn save">Save Attendance</button>
+        <button className="attend-btn save">Save </button>
       </div>
       <div className="attend-student-list">
         {students.map((student, i) => (

@@ -15,7 +15,7 @@ const CourseList = ({ courses, onEdit, onDelete, toggleform }) => {
             <th>CourseCode</th>
             <th>Description</th>
             <th>StartDate</th>
-            <th>Actions</th>
+            <th>Modify</th>
           </tr>
         </thead>
         <tbody>

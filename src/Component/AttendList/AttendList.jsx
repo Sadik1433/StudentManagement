@@ -3,8 +3,9 @@ import "./AttendList.css";
 const AttendanceList = ({ records }) => {
   
   return (
+    <div className="attend-lists-page">
+      <h1>Attendance Records</h1>
     <div className="attend-lists-container">
-      <h2>Attendance Records</h2>
       {records.length === 0 ? (
         <p>No attendance records found.</p>
       ) : (
@@ -38,6 +39,7 @@ const AttendanceList = ({ records }) => {
           </div>
         ))
       )}
+       </div>
     </div>
   );
 };

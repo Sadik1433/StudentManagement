@@ -86,11 +86,11 @@ const AddStudentForm = ({ onAdd, onCancel }) => {
        
       />
 
-      <div className="flex gap-2">
-        <button >
+      <div className="Addform-container">
+        <button  className="Addform add">
           Add
         </button>
-        <button
+        <button className="Addform cancel"
           type="button"
           onClick={onCancel}
         >

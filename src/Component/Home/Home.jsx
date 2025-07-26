@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 
-const stuData = [
+const studentData = [
   {
     id: 1,
     name: "Student List",
@@ -17,7 +17,7 @@ const stuData = [
   {
     id: 3,
     name: "Course Management",
-    description: "Search all Teachers Data",
+    description: "Manage Courses  ",
     link: "/course",
   },  
   {
@@ -37,9 +37,9 @@ const stuData = [
 const Home = () => {
   return (
     <div className="Home-container">
-      <h1 className="home-header"></h1>
+      <h1 className="home-header">School Management Dashboard</h1>
       <ul className="home-list">
-        {stuData.map((item) => (
+        {studentData.map((item) => (
           <li key={item.id} className="home-item">
             <h2 className="item-head">{item.name}</h2>
             <p className="item-desc">{item.description}</p>

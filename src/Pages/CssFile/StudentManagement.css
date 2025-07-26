@@ -1,7 +1,6 @@
 .StudentManagementContainer{
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
 }
 .StudentManagementContainer h1 {
     text-align: center;
