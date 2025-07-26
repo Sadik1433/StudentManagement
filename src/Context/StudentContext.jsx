@@ -41,9 +41,9 @@ const students_data = [
 ];
 
 const course_data =[
-  { id: 1, name: 'Mathematics', instructor: 'Dr. Smith', duration: '3' },
-  { id: 2, name: 'Biology', instructor: 'Dr. Smith', duration: '3' },
-  { id: 3, name: 'Science', instructor: 'Dr. Smith', duration: '3' },
+  { id: 1, name: 'Mathematics', instructor: 'Dr. Smith', duration: '3', startDate: '2025-01-01',time: '10:00 - 11:30 AM', courseCode: 'A134',  coursedescription: 'nothing at present' },
+  { id: 2, name: 'Biology', instructor: 'Dr. Smith', duration: '3' ,startDate: '2025-01-01', time: '10:00 - 11:30 AM',courseCode: 'A134',  coursedescription: 'nothing at present'},
+  { id: 3, name: 'Science', instructor: 'Dr. Smith', duration: '3',startDate: '2025-01-01' ,time: '10:00  - 11:30 AM',courseCode: 'A134',  coursedescription: 'nothing at present'},
 ]
  
 export const StudentContext = createContext(null);

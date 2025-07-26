@@ -4,10 +4,8 @@ import AttendForm from "../Component/AttendForm/AttendForm.jsx";
 import AttendList from "../Component/AttendList/AttendList.jsx";
 import { StudentContext } from "../Context/StudentContext.jsx";
 import { Link } from "react-router-dom";
-// import MonthlyAttendanceView from "../Component/MonthlyView/MonthlyView.jsx";
 
 const Attendance = () => {
-  // const [attendanceRecords, setAttendanceRecords] = useState([]);
 
   const [showMonthlyView, setShowMonthlyView] = useState(false);
   

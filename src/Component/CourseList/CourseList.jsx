@@ -1,6 +1,6 @@
 import './CourseList.css';
 
-const CourseList = ({ courses, onEdit, onDelete }) => {
+const CourseList = ({ courses, onEdit, onDelete, toggleform }) => {
 
   return (
     <div className='course-list-container'>
@@ -12,6 +12,9 @@ const CourseList = ({ courses, onEdit, onDelete }) => {
             <th>Course Name</th>
             <th>Instructor</th>
             <th>Duration</th>
+            <th>CourseCode</th>
+            <th>Description</th>
+            <th>StartDate</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -21,17 +24,27 @@ const CourseList = ({ courses, onEdit, onDelete }) => {
               <td>{index + 1}</td>
               <td>{course.name}</td>
               <td>{course.instructor}</td>
-              <td>{course.duration} Months</td>
+              <td>{course.duration} Months</td>  
+              <td>{course.courseCode}</td>
+              <td>{course.coursedescription}</td>
+              <td>{new Date(course.startDate).toLocaleDateString("en-GB", {
+               day: "2-digit",
+              month: "short",
+              year: "numeric"})}</td>
+               
               <td className='btn-row'>
                 <button
                 className='courselist-btn edit-btn'
-                  onClick={() => onEdit(course)}
+                   onClick={() => {
+    onEdit(course); 
+    toggleform();   
+  }} 
                 >
                   Edit
                 </button>
                 <button
                 className='courselist-btn  delete-btn'
-                  onClick={() => onDelete(course.id)}
+                  onClick={() => onDelete(course.id) }
                 >
                   Delete
                 </button>

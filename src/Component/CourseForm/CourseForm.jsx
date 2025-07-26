@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './CourseForm.css'; 
 
-const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
+const CourseForm = ({ onSubmit, selectedCourse, clearSelection, toggleform }) => {
   const [formData, setFormData] = useState({
     name: '',
     instructor: '',
@@ -21,10 +21,11 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormData({ name: '', instructor: '', duration: '' });
+    setFormData({ name: '', instructor: '', duration: '', time: '', courseCode:'', startDate: '', coursedescription: '' });
     console.log('Form submitted:', formData);
     if (onSubmit) {
       onSubmit(formData);
+      toggleform()
     }
   };
 
@@ -55,6 +56,38 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
         placeholder="Duration (e.g. 3 months)"
         required
       />
+      <input
+        type="text"
+        name="time"
+        value={formData.time || ''}
+        onChange={handleChange}
+        placeholder="Timing"
+        required
+      />
+      <input
+      type='text'
+      name='courseCode'
+      value={formData.courseCode || ''}
+      onChange={handleChange}
+      placeholder='Course Code'
+      required
+      />
+      <input
+        type="date"
+        name="startDate"
+        value={formData.startDate || ''}
+        onChange={handleChange}
+        placeholder="Start Date"
+        required
+      />
+      <textarea type='text'
+      name='coursedescription'
+      value={formData.coursedescription || ''}
+      onChange={handleChange}
+      placeholder='Course Description'
+      required
+      /> 
+      
       <div className='selected-btn-container'>
         <button>
           {selectedCourse ? 'Update' : 'Add'}
@@ -62,7 +95,9 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
         {selectedCourse && (
           <button
             type="button"
-            onClick={clearSelection}
+            onClick={()=> {
+              clearSelection();
+              toggleform()}}
           >
             Cancel
           </button>

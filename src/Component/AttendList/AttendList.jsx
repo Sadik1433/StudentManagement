@@ -11,10 +11,10 @@ const AttendanceList = ({ records }) => {
         records.map((entry, i) => (
           <div key={i} className="attend-list-display">
             <h3 className="attend-list-date">Date: {new Date(entry.date).toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric"
-  })}</h3>
+            day: "2-digit",
+            month: "long",
+             year: "numeric"
+              })}</h3>
             <table className="present-table-data">
               <thead className="attend-table-head">
                 <tr>

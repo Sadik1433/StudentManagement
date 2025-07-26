@@ -6,11 +6,10 @@ import Home from "./Component/Home/Home.jsx";
 import Login from "./Pages/Login.jsx";
 import SignUp from "./Pages/SignUp.jsx";
 import About from "./Pages/About.jsx";
-import Attendance from "./Pages/Attendance.jsx";
 import StudentManagement from "./Pages/StudentManagement.jsx";
 import MonthlyView from "./Component/MonthlyView/MonthlyView.jsx";
 import CourseManagement from "./Pages/CourseManagement.jsx";
-
+import Attendance from './Pages/Attendance.jsx'
 
 const App = () => {
   return (
