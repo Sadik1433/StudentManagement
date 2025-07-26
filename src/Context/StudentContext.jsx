@@ -40,17 +40,57 @@ const students_data = [
   },
 ];
 
+const course_data =[
+  { id: 1, name: 'Mathematics', instructor: 'Dr. Smith', duration: '3' },
+  { id: 2, name: 'Biology', instructor: 'Dr. Smith', duration: '3' },
+  { id: 3, name: 'Science', instructor: 'Dr. Smith', duration: '3' },
+]
+ 
 export const StudentContext = createContext(null);
 
 const StudentContextProvider = (props) => {
   const [students, setStudents] = useState(students_data);
   const [attendanceRecords, setAttendanceRecords] = useState([]);
+    const [assignments, setAssignments] = useState([]);
+  const [courses, setCourses] = useState(course_data);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  
+  const handleAddOrUpdate = (course) => {
+    if (course.id) {
+      setCourses((prev) =>
+        prev.map((c) => (c.id === course.id ? course : c))
+      );
+    } else {
+      const newCourse = { ...course, id: Date.now() };
+      setCourses((prev) => [...prev, newCourse]);
+    }
+  };
+   
+  const handleDelete = (id) => {
+    setCourses((prev) => prev.filter((course) => course.id !== id));
+    setAssignments((prev) => prev.filter((a) => parseInt(a.courseId) !== id));
+    if (selectedCourse?.id === id) {
+      setSelectedCourse(null);
+    }
+  };
+  
+  const handleEdit = (course) => {
+    setSelectedCourse(course);
+  };
+
+  const handleAssign = (assign) => {
+    setAssignments((prev) => [...prev, assign]);
+  };
+
+  const handleUnassign = (index) => {
+    setAssignments((prev) => prev.filter((_, i) => i !== index));
+  };
 
     const handleAttendanceSubmit = (record) => {
     setAttendanceRecords((prev) => [...prev, record]);
   };
   
-  const contextData = { students, attendanceRecords, setStudents,handleAttendanceSubmit };
+  const contextData = { students, attendanceRecords, setStudents,handleAttendanceSubmit, courses, handleAddOrUpdate, handleDelete, handleEdit, handleAssign, handleUnassign,assignments, selectedCourse, setSelectedCourse };
   return (
     <StudentContext.Provider value={contextData}>
       {props.children}

@@ -1,13 +1,14 @@
 import './CourseList.css';
 
 const CourseList = ({ courses, onEdit, onDelete }) => {
+
   return (
-    <div >
+    <div className='course-list-container'>
       <h2>Course List</h2>
-      <table >
+      <table className='course-list' >
         <thead>
           <tr>
-            <th>#</th>
+            <th>S.No</th>
             <th>Course Name</th>
             <th>Instructor</th>
             <th>Duration</th>
@@ -20,14 +21,16 @@ const CourseList = ({ courses, onEdit, onDelete }) => {
               <td>{index + 1}</td>
               <td>{course.name}</td>
               <td>{course.instructor}</td>
-              <td>{course.duration}</td>
-              <td>
+              <td>{course.duration} Months</td>
+              <td className='btn-row'>
                 <button
+                className='courselist-btn edit-btn'
                   onClick={() => onEdit(course)}
                 >
                   Edit
                 </button>
                 <button
+                className='courselist-btn  delete-btn'
                   onClick={() => onDelete(course.id)}
                 >
                   Delete

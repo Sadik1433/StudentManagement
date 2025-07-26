@@ -16,12 +16,18 @@ const stuData = [
   },
   {
     id: 3,
+    name: "Course Management",
+    description: "Search all Teachers Data",
+    link: "/course",
+  },  
+  {
+    id: 4,
     name: "TeachersData",
     description: "Search all Teachers Data",
     link: "/teachers",
   },
   {
-    id: 4,
+    id: 5,
     name: "Settings",
     description: "Manage your account settings.",
     link: "/settings",

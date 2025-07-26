@@ -9,6 +9,7 @@ import About from "./Pages/About.jsx";
 import Attendance from "./Pages/Attendance.jsx";
 import StudentManagement from "./Pages/StudentManagement.jsx";
 import MonthlyView from "./Component/MonthlyView/MonthlyView.jsx";
+import CourseManagement from "./Pages/CourseManagement.jsx";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/attend" element={<Attendance />} />
         <Route path="/students" element={<StudentManagement />} />
         <Route path="/monthlyView" element={<MonthlyView />} />
+        <Route path="/course" element={<CourseManagement />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

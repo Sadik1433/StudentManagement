@@ -29,8 +29,9 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3 >
+    <div className='course-form-container'>
+    <form onSubmit={handleSubmit} className='course-form'>
+      <h3 className='course-form__title'>
         {selectedCourse ? 'Edit Course' : 'Add New Course'}
       </h3>
       <input
@@ -54,7 +55,7 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
         placeholder="Duration (e.g. 3 months)"
         required
       />
-      <div>
+      <div className='selected-btn-container'>
         <button>
           {selectedCourse ? 'Update' : 'Add'}
         </button>
@@ -68,6 +69,8 @@ const CourseForm = ({ onSubmit, selectedCourse, clearSelection }) => {
         )}
       </div>
     </form>
+        </div>
+
   );
 };
 

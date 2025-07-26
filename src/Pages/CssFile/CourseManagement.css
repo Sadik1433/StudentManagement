@@ -1,0 +1,10 @@
+.course-management-page{
+    min-height: 100vh;
+}
+.course-head{
+    text-align: center;
+    background-color: aqua;
+}
+.course-management-container{
+    display: flex;
+}
