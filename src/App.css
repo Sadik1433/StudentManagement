@@ -3,8 +3,21 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: sans;
+  letter-spacing: 1px;
 }
 :root{
+  --bg-color: #1f2531;
+  --text-color: #f0f0f0;
+  --card-color: #1f253a;
+  --navbar-bg-color:  #1f2531;
+  --button-text-color: #f0f0f0;
+  --head-color: #007bff;
+  --main-head-color:#6f42c1;
+  --button-color: #1f2531;
+  color: #0e2148;  
+  color: #201E43;
+}
+  /* :root{
   --bg-color: rgba(139, 139, 243, 0.699);
   --text-color: rgb(179, 250, 255);
   --btn-color: rgba(46, 124, 226, 0.76);
@@ -12,7 +25,7 @@
   --head-color: rgb(47, 13, 240);
   --card-color: whiteSmoke;
   --card-text-color: rgb(7, 84, 114);
-}
+} */
 body {
   overflow: hidden;
   overflow-y: scroll;
