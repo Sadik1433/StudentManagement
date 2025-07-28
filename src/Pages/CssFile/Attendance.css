@@ -7,7 +7,8 @@
   top: 50px;
 }
 .attend-heading{
-  color: var(--head-color);
+  color: var(--main-head-color);
+  text-shadow: 0px 2px 2px whitesmoke;
 }
 .attendance-form-container{
   width: 100%;
@@ -29,8 +30,6 @@
   width: 450px;
   height: 100%;
   padding-bottom: 80px ;
-  background-color: grey;
-  color: turquoise;
   overflow: auto;
   transition: transform 0.1s ease-in-out;
   z-index: 1000;  
@@ -46,10 +45,11 @@
   position: fixed;
   top: 60px;
   right: 0;
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: var(--bg-color);
   text-align: center;
+  border-bottom: 2px groove var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;

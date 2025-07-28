@@ -6,8 +6,9 @@
   flex-wrap: wrap;
 }
 .attend-lists-page h1 {
-  text-align: center;
+  text-align: left;
   color: var(--head-color);
+  text-shadow: 0px 2px 2px whitesmoke;
   margin-bottom: 20px;
 }
 .attend-list-display {

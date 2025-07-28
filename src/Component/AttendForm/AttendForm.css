@@ -12,12 +12,13 @@
   color: var(--head-color);
 } 
 .date-input{
-  max-width: 90px;
-  background-color: transparent;
-  border: 2px solid whitesmoke;
+  max-width: 150px;
+  font-size: 18px;
+  border: 2px solid var(--head-color);
   padding: 5px;
   border-radius: 5px;
-  color: var(--text-color)
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 .attend-btn-container {
   width: 100%;

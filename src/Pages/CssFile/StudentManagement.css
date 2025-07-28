@@ -1,28 +1,29 @@
-.StudentManagementContainer{
-    min-height: 100vh;
-    background-color: var(--bg-color);
+.StudentManagementContainer {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: 20px;
 }
 .StudentManagementContainer h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}   
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  color: var(--main-head-color);
+}
 .StudentManagementContainer .student-list {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 .AddStudentButtonContainer {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .AddStudentButton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

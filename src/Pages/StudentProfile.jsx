@@ -19,15 +19,15 @@ const StudentProfile = ({ student }) => {
           </div>
         )}
         <h2 className='profile-name'>{student.name}</h2>
-        <p className='roll-no' >Roll No: {student.rollNumber}</p>
       </div>
 
       <div className="profile-details">
-        <p><strong>Class:</strong> {student.className}</p>
-        <p><strong>Date of Birth:</strong> {student.dob}</p>
-        <p><strong>Phone:</strong> {student.phone}</p>
-        <p><strong>Address:</strong> {student.address}</p>
-        <p><strong>Email:</strong> {student.email}</p>
+        <p><strong>Roll No: </strong>{student.rollNumber}</p>
+        <p><strong>Class: </strong> {student.className}</p>
+        <p><strong>Date of Birth: </strong> {student.dob}</p>
+        <p><strong>Phone: </strong> {student.phone}</p>
+        <p><strong>Address: </strong> {student.address}</p>
+        <p><strong>Email: </strong> {student.email}</p>
       </div>
     </div>
   );

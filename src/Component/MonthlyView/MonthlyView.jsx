@@ -10,7 +10,7 @@ const MonthlyView = () => {
 
   const getDaysInMonth = () => {
     if (!month || !year) return 0;
-    return new Date(year, month, 0).getDate(); // month is 1-based
+    return new Date(year, month, 0).getDate();
   };
 
   const filteredRecords = attendanceRecords.filter((r) => {
@@ -81,15 +81,15 @@ const MonthlyView = () => {
       {month && year ? (
         <div className="monthly-table">
           <table >
-            <thead className="bg-gray-100">
+            <thead>
               <tr>
-                <th className="border p-1">Student</th>
+                <th>Student</th>
                 {Array.from({ length: daysInMonth }, (_, i) => (
                   <th key={i + 1} className="border p-1">
                     {String(i + 1).padStart(2, "0")}
                   </th>
                 ))}
-                <th className="border p-1">Present</th>
+                <th>Present</th>
               </tr>
             </thead>
             <tbody>

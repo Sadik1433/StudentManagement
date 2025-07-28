@@ -17,6 +17,7 @@ const EditStudentForm = ({ student, onSave, onCancel }) => {
   };
 
   return (
+    <div className='edit-student-page'>    
     <form onSubmit={handleSubmit} className="edit-student-form ">
       <h2 className='edit-student-heading'>Edit Student Profile</h2>
       <input
@@ -24,7 +25,6 @@ const EditStudentForm = ({ student, onSave, onCancel }) => {
         value={formData.name}
         onChange={handleChange}
         placeholder="Full Name"
-        className="block w-full p-2 border mb-2"
         required
       />
       <input
@@ -32,7 +32,6 @@ const EditStudentForm = ({ student, onSave, onCancel }) => {
         value={formData.rollNumber}
         onChange={handleChange}
         placeholder="Roll Number"
-        className="block w-full p-2 border mb-2"
         required
       />
       <input
@@ -40,49 +39,40 @@ const EditStudentForm = ({ student, onSave, onCancel }) => {
         value={formData.className}
         onChange={handleChange}
         placeholder="Class Name"
-        className="block w-full p-2 border mb-2"
       />
       <input
         name="dob"
         value={formData.dob}
         onChange={handleChange}
-        type="date"
-        className="block w-full p-2 border mb-2"
-      />
+        type="date"/>
       <input
         name="phone"
         value={formData.phone}
         onChange={handleChange}
-        placeholder="Phone"
-        className="block w-full p-2 border mb-2"
-      />
+        placeholder="Phone" />
       <input
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder="Email"
-        className="block w-full p-2 border mb-2"
-      />
+        placeholder="Email"/>
       <textarea
         name="address"
         value={formData.address}
         onChange={handleChange}
-        placeholder="Address"
-        className="block w-full p-2 border mb-2"
-      />
-      <div className="flex gap-2">
-        <button className="bg-green-600 text-white px-4 py-2 rounded">
+        placeholder="Address"/>
+      <div className="edit-btn-container">
+        <button className="">
           Save
         </button>
         <button
           type="button"
           onClick={onCancel}
-          className="bg-gray-300 px-4 py-2 rounded"
         >
           Cancel
         </button>
-      </div>
+      </div>   
     </form>
+    </div>
   );
 };
 

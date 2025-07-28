@@ -22,8 +22,6 @@ const StudentManagement = () => {
 
   return (
     <div className="StudentManagementContainer ">
-      <h1>Student Management</h1>
-
       {addingStudent ? (
         <AddStudentForm
           onAdd={(newStudent) => {

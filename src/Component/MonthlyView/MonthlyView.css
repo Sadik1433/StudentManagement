@@ -1,15 +1,20 @@
 .monthly-attendance-view{
-    background-color: aqua;
-    padding: 10px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 20px;
 }
 .monthly-attendance-view h2 {
     text-align: center;
-    color: darkblue;
+    color: var(--head-color);
+    font-size: 30px;
 }
 .monthly-attendance-view select {
     padding: 5px;
     margin: 10px;
-    border: 2px solid transparent;
+    border: 2px solid var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 20px;
     outline: none;
 }
 .monthly-table{
@@ -22,6 +27,6 @@
 }
 .monthly-table th, .monthly-table td {
     border: 1px solid #ddd;
-    padding: 8px;
     text-align: center;
+    font-size: 20px;
 }
