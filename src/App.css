@@ -21,3 +21,7 @@ body {
   overflow: hidden;
   overflow-y: scroll;
 }
+/* 
+input::placeholder{
+  color: var(--text-color);
+} */

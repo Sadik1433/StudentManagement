@@ -1,5 +1,5 @@
 .student-list-container{
-    min-height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -7,37 +7,56 @@
 .student-list-container > div {
     margin-bottom: 20px;
 }
-.student-list-container input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; 
+.studednt-search-container{
+    position: fixed;
+    top: 65px;
+    z-index: 1000;
 }
+.student-list-container input,
 .student-list-container select {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background-color: var(--head-color);
+    border: 2px solid var(--main-head-color);
+    border-radius: 8px;
+    outline: none;
+    margin: 5px; 
+    color: var(--text-color);
 }
 .student-list{
+    position: relative;
+    top: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding: 10px 20px;
+    padding: 30px 10px;
 }
 .student-card {
-    background-color: white;
-    padding: 20px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 0px var(--text-color);
+}
+.profile-image img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+.profile-data{
+    padding: 5px 10px;
 }
 .student-card h3 {
     margin: 0 0 10px;
     font-size: 1.75rem;
     font-weight: bold;
-    color: #333;
+    color: var(--head-color);
 }
 .student-card p {
     margin: 10px 0;
-    color: #555;
+    color: var(--text-color);
     font-size: 1rem;
 }
 .student-card button {

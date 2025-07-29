@@ -10,6 +10,7 @@
 }
 .course-list-container h2 {
   text-align: center;
+  color: var(--head-color);
   margin-bottom: 20px;
 }
 .course-list {
@@ -17,8 +18,9 @@
   text-align: center;
 }
 .course-list th {
-  border-bottom: 2px solid grey;
-  padding: 5px 20px;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+  overflow: auto;
 }
 .btn-row {
   display: flex;

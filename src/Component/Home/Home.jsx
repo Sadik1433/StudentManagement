@@ -22,12 +22,18 @@ const studentData = [
   },  
   {
     id: 4,
+    name: "Student Marks",
+    description: "Manage Marks  ",
+    link: "/marks",
+  },  
+  {
+    id: 5,
     name: "TeachersData",
     description: "Search all Teachers Data",
     link: "/teachers",
   },
   {
-    id: 5,
+    id: 6,
     name: "Settings",
     description: "Manage your account settings.",
     link: "/settings",

@@ -1,6 +1,19 @@
 import { createContext } from "react";
 import { useState } from "react";
 
+const teachers_data = [
+  {
+    id: 1,
+    name: "John Doe",
+    subject: "Mathematics",
+    email: "john@example.com",
+    age: 35,
+    gender: "Male",
+    experience: "10 Years",
+    phone: "9876543210",
+  },
+];
+
 const students_data = [
   {
     id: 1,
@@ -13,7 +26,8 @@ const students_data = [
     address: "123, MG Road, Mumbai",
     imageUrl:
       "https://res.cloudinary.com/dnarxeess/image/upload/v1746763169/WhatsApp_Image_2025-05-09_at_09.27.50_29081efb-removebg-preview_zxthzd.png",
-  },
+
+    },
   {
     id: 2,
     name: "Rahul Verma",
@@ -54,7 +68,8 @@ const StudentContextProvider = (props) => {
     const [assignments, setAssignments] = useState([]);
   const [courses, setCourses] = useState(course_data);
   const [selectedCourse, setSelectedCourse] = useState(null);
-  
+   const [marksData, setMarksData] = useState([]);
+
   const handleAddOrUpdate = (course) => {
     if (course.id) {
       setCourses((prev) =>
@@ -90,7 +105,16 @@ const StudentContextProvider = (props) => {
     setAttendanceRecords((prev) => [...prev, record]);
   };
   
-  const contextData = { students, attendanceRecords, setStudents,handleAttendanceSubmit, courses, handleAddOrUpdate, handleDelete, handleEdit, handleAssign, handleUnassign,assignments, selectedCourse, setSelectedCourse };
+  const handleMarksEdit = (index) => {
+    setFormData(marksData[index]);
+    setEditIndex(index);
+  };
+
+  const handleMarksDelete = (index) => {
+    setMarksData(marksData.filter((_, i) => i !== index));
+  };
+  
+  const contextData = { students, attendanceRecords, setStudents,handleAttendanceSubmit, courses, handleAddOrUpdate, handleDelete, handleEdit, handleAssign, handleUnassign,assignments, selectedCourse, setSelectedCourse,marksData, setMarksData, handleMarksEdit, handleMarksDelete };
   return (
     <StudentContext.Provider value={contextData}>
       {props.children}

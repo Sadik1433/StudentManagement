@@ -8,15 +8,15 @@
   padding: 20px 10px;
 }
 .course-form {
-  min-width: 500px;
-  min-height: 500px;
+  min-width: 450px;
+  min-height: 300px;
   margin: 0px auto;
-  padding: 10px;  
+  padding: 20px ;  
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   border: 2px solid rgba(59, 59, 243, 0.863);
 }
 .course-form__title {
@@ -31,10 +31,12 @@
 .course-form select,
 .course-form textarea, 
 .course-form button {
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  background-color: var(--bg-color);
+  box-shadow: 0px 1px 0px var(--text-color);
+  border: 1px solid transparent;
   border-radius: 4px;
 }
 .course-form input:focus,

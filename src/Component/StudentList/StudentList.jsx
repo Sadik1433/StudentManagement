@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './StudentList.css';
 
-const StudentList = ({ students, onView, onEdit }) => {
+const StudentList = ({ students, onView, onEdit, setAddStudent }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedClass, setSelectedClass] = useState('');
 
@@ -21,13 +21,12 @@ const StudentList = ({ students, onView, onEdit }) => {
 
   return (
     <div className="student-list-container ">
-      <div>
+      <div className='studednt-search-container'>
         <input
           type="text"
           placeholder="Search by name or roll number"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 border rounded w-full sm:w-1/2"
         />
         <select
           value={selectedClass}
@@ -40,32 +39,38 @@ const StudentList = ({ students, onView, onEdit }) => {
             </option>
           ))}
         </select>
+
       </div>
       {filtered.length > 0 ? (
         <div className="student-list">
           {filtered.map((student) => (
             <div key={student.id}  className='student-card'>
+            <div className='profile-image'>
+            <img src={student.imageUrl} alt='profile' className='profile-image' />
+            </div>
+            <div className='profile-data'>
               <h3>{student.name}</h3>
               <p>Roll No: {student.rollNumber}</p>
               <p>Class: {student.className}</p>
-              <div >
+              <div className='profile-btn'>
                 <button
                   onClick={() => onView(student)}
                 >
                   View
                 </button>
                 <button
-                  className="text-green-600 underline"
-                  onClick={() => onEdit(student)}
+        
+                onClick={() => onEdit(student)}
                 >
                   Edit
                 </button>
+            </div>
               </div>
             </div>
           ))}
         </div>
       ) : (
-        <p className="text-gray-600">No students found.</p>
+        <p>No students found.</p>
       )}
     </div>
   );
