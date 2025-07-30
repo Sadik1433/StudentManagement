@@ -16,15 +16,16 @@ const studentData = [
   },
   {
     id: 3,
-    name: "Course Management",
-    description: "Manage Courses  ",
-    link: "/course",
-  },  
-  {
-    id: 4,
     name: "Student Marks",
     description: "Manage Marks  ",
     link: "/marks",
+     },  
+  {
+    id: 4,
+    name: "Course Management",
+    description: "Manage Courses  ",
+    link: "/course",
+ 
   },  
   {
     id: 5,

@@ -34,7 +34,7 @@ const Login = () => {
     if (email === "sadik123@gmail.com" && password === "123456") {
       setError("");
       alert("Login successful!");
-      navigate("/home");
+      navigate("/hero");
     } else {
       setError("Invalid email or password");
     }

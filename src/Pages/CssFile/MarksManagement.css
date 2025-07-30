@@ -2,36 +2,71 @@
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  padding: 20px 10px;
+}
+.marks-top-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marks-button{
+  padding: 8px 15px;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 10px;
+}
+.marks-page h2{
+  width: 90%;
+  text-align: center;
   padding: 10px;
 }
-.marks-page h2 {
-  color: var(--main-head-color);
-}
-.marks-form-container {
-  display: flex;
+
+.marks-form-container form {
   padding: 10px 20px;
-}
-.marks-form {
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  margin: 10px auto;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px var(--text-color);
 }
-.select-container select{
-    padding: 5px 10px;
-    margin: 5px;
-    border: 2px solid transparent;
-    border-radius: 8px;
+.marks-form-container select{
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 10px;
+}
+.marks-form-container option{
+  font-size: 18px;
 }
 .marks-input-container input{
-    width: 50%;
-    padding: 8px;
+  text-align: left;
+  padding: 5px;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--head-color);
 }
 .marks-input-container label{
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5cqb;
 }
-.marks-input-container button{
-    width: 60px;
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+.add-marks-btn{
+  padding: 10px;
+  background-color: rgba(28, 28, 212, 0.904);
+  color: var(--text-color);
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
 }
