@@ -79,7 +79,7 @@ const MarksManagement = () => {
           required
         >
           <option value="">Select Exam</option>
-          <option value="Midterm">Midterm</option>
+          <option value="Mid Term">Midterm</option>
           <option value="Final">Final</option>
           <option value="Unit Test">Unit Test</option>
         </select>
@@ -97,9 +97,9 @@ const MarksManagement = () => {
           </div>
         ))}
          <div className="btn-container">
-        <button type="submit" className="add-marks-btn">
+        {/* <button type="submit" className="add-marks-btn">
           {editIndex !== null ? "Update Marks" : "Add Marks"}
-        </button>
+        </button> */}
          </div>
       </form>
          </div>

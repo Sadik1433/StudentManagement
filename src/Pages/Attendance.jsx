@@ -17,7 +17,6 @@ const Attendance = () => {
   return (
     <div className="Attendance-container">
       <div className="topbar">
-        <h1 className="attend-heading">Attendance Management</h1>
         <button className="toggle-button" onClick={toggleSidebar}>
           {isOpen ? "Attendance List" : "Attendance List"}
         </button>

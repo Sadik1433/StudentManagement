@@ -77,16 +77,6 @@ const Login = () => {
             Sign up
           </Link>
         </p>
-        <div className="buttons-container">
-          <div className="apple-login-button">
-            <FaApple size={25} />
-            <span>Log in with Apple</span>
-          </div>
-          <div className="google-login-button">
-            <FcGoogle size={25} />
-            <span>Log in with Google</span>
-          </div>
-        </div>
       </div>
     </div>
   );

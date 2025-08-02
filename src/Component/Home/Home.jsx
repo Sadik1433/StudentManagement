@@ -5,38 +5,31 @@ const studentData = [
   {
     id: 1,
     name: "Student List",
-    description: "View and edit student profile information.",
+    description: "Browse, add, edit, and manage student profiles and personal details.",
     link: "/students",
   },
   {
     id: 2,
     name: "Attendance",
-    description: "View exam schedules and results.",
+    description: "Track and update student attendance records with real-time insights.",
     link: "/attend",
   },
   {
     id: 3,
     name: "Student Marks",
-    description: "Manage Marks  ",
+    description: "Add, edit, and view student marks, grades, and academic performance.",
     link: "/marks",
-     },  
+  },
   {
     id: 4,
     name: "Course Management",
-    description: "Manage Courses  ",
+    description: "Create, update, and manage available courses and subject details.",
     link: "/course",
- 
-  },  
-  {
-    id: 5,
-    name: "TeachersData",
-    description: "Search all Teachers Data",
-    link: "/teachers",
   },
   {
-    id: 6,
+    id: 5,
     name: "Settings",
-    description: "Manage your account settings.",
+    description: "Customize your account preferences, security, and dashboard settings.",
     link: "/settings",
   },
 ];

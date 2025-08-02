@@ -1,73 +1,123 @@
-.student-list-container{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.student-list-container {
+  position: relative;
+  top: 60px;
+  padding: 20px;
+  background: var(--bg-color);
+  min-height: 100vh;
 }
-.student-list-container > div {
-    margin-bottom: 20px;
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-.studednt-search-container{
-    position: fixed;
-    top: 65px;
-    z-index: 1000;
-}
-.student-list-container input,
-.student-list-container select {
-    padding: 10px;
-    background-color: var(--head-color);
-    border: 2px solid var(--main-head-color);
-    border-radius: 8px;
-    outline: none;
-    margin: 5px; 
-    color: var(--text-color);
-}
-.student-list{
-    position: relative;
-    top: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 30px 10px;
-}
+
 .student-card {
-    background-color: var(--card-color);
-    color: var(--text-color);
-    padding: 10px;
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 1px 1px 0px var(--text-color);
+  display: flex;
+  align-items: center;
+  background: var(--card-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.profile-image img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border: 2px solid grey;
-    border-radius: 8px;
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-.profile-data{
-    padding: 5px 10px;
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
-.student-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: var(--head-color);
+
+.profile-data h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: var(--main-head-color);
 }
-.student-card p {
-    margin: 10px 0;
-    color: var(--text-color);
-    font-size: 1rem;
+
+.profile-data p {
+  font-size: 14px;
+  color: var(--text-color);
 }
-.student-card button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
+
+.profile-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
-.student-card button:hover {
-    background-color: #0056b3;
+
+.profile-btn button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-btn button:first-child {
+  background: #4facfe;
+  color: white;
+}
+
+.profile-btn button:first-child:hover {
+  background: #00c6ff;
+}
+
+.profile-btn button:last-child {
+  background: #ff8c42;
+  color: white;
+}
+
+.profile-btn button:last-child:hover {
+  background: #ff6b1a;
+}
+
+.student-list-container p {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .student-search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .student-search-container input,
+  .student-search-container select {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 70px;
+    height: 70px;
+  }
+  .student-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-data h3 {
+    font-size: 16px;
+  }
+
+  .profile-btn {
+    flex-direction: column;
+  }
+
+  .profile-btn button {
+    width: 100%;
+  }
 }

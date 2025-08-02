@@ -33,9 +33,10 @@ const MarksDisplay = () => {
   // Edit marks
   const handleMarksEdit = (index) => {
     const newMarks = [...marksData];
+    console.log(newMarks)
     const updatedSubjects = newMarks[index].subjects.map((sub) => {
       const newMark = prompt(`Enter marks for ${sub.subject}`, sub.marks);
-      return { ...sub, marks: Number(newMark) || sub.marks };
+      return { ...sub, marks: newMark || sub.marks };
     });
     newMarks[index].subjects = updatedSubjects;
     setMarksData(newMarks);
