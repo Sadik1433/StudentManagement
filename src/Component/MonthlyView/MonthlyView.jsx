@@ -47,8 +47,8 @@ const MonthlyView = () => {
 
   return (
     <div className="monthly-attendance-view">
-      <h2>Monthly Attendance View</h2>
-      <div>
+      <h2>Monthly View</h2>
+      <div className="monthly-view-container">
         <select
           value={month}
           onChange={(e) => setMonth(e.target.value)}
@@ -65,7 +65,7 @@ const MonthlyView = () => {
         </select>
 
         <select
-          className="p-2 border"
+          className=""
           value={year}
           onChange={(e) => setYear(e.target.value)}
         >
@@ -80,7 +80,7 @@ const MonthlyView = () => {
 
       {month && year ? (
         <div className="monthly-table">
-          <table >
+          <table>
             <thead>
               <tr>
                 <th>Student</th>

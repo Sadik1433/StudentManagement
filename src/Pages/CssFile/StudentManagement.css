@@ -18,10 +18,10 @@
   flex-wrap: wrap;
   border-bottom: 1px solid whitesmoke;
 }
-.student-search-container{
+.student-search-container {
   display: flex;
   gap: 20px;
-  margin-right: 20px ;
+  margin-right: 20px;
 }
 
 .student-search-container input,
@@ -46,4 +46,22 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .AddStudentButtonContainer {
+    background-color: aqua;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .student-search-container{
+    width: 50%;
+    background-color: red;
+  }
+  
+.student-search-container input,
+.student-search-container select {
+  width: 150px;
+  background-color: yellow;
+}
 }

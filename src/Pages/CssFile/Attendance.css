@@ -6,22 +6,14 @@
   position: relative;
   top: 50px;
 }
-.attend-heading{
+.attend-heading {
   color: var(--main-head-color);
   text-shadow: 0px 2px 2px whitesmoke;
 }
-.attendance-form-container{
+.attendance-form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-.monthly-view{
-  width: 100%;
-  max-width: 1000px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .sidebar {
   position: fixed;
@@ -29,10 +21,10 @@
   right: 0;
   width: 450px;
   height: 100%;
-  padding-bottom: 80px ;
+  padding-bottom: 80px;
   overflow: auto;
   transition: transform 0.1s ease-in-out;
-  z-index: 1000;  
+  z-index: 1000;
   color: aliceblue;
 }
 
@@ -57,19 +49,33 @@
   z-index: 1100;
   box-shadow: 2px 0px 3px grey;
 }
-
+.top-bar-btn-container {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .toggle-button {
-  background: none;
-  color: white;
-  border: none;
-  font-size: 24px;
+  padding: 5px 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 20px;
   cursor: pointer;
-  margin-right: 10px;
+}
+.toggle-button span {
+  padding-left: 5px;
 }
 
-@media (min-width: 768px) {
-  .sidebar.collapsed {
-    transform: translateX(0);
-    width: 60px;
+@media (max-width: 768px) {
+  .top-bar-btn-container {
+    width: 100%;
+  }
+  .toggle-button {
+    font-size: 18px;
+  }
+  .sidebar {
+    width: 100%;
   }
 }

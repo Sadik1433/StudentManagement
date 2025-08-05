@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './StudentList.css';
 
 const StudentList = ({ filtered, onView, onEdit, setAddStudent }) => {
