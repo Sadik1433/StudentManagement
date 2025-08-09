@@ -48,7 +48,7 @@ const MarksManagement = () => {
     <div className="marks-page">
     <div className="marks-top-bar">
       <h2>Enter Student Marks</h2>
-     <Link to='/display'>
+     <Link to='/displaymarks'>
       <button  className="marks-button">
        Marks
       </button>

@@ -1,7 +1,5 @@
 import "./CssFile/Login.css";
 import { Link } from "react-router-dom";
-import { FaApple } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,7 +32,7 @@ const Login = () => {
     if (email === "sadik123@gmail.com" && password === "123456") {
       setError("");
       alert("Login successful!");
-      navigate("/hero");
+      navigate("/home");
     } else {
       setError("Invalid email or password");
     }

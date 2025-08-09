@@ -1,5 +1,6 @@
 .edit-student-page {
-  min-height: 100vh;
+  position: relative;
+  top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -33,7 +34,7 @@
   border-color: #007bff;
   outline: none;
 }
-.edit-btn-container{
+.edit-btn-container {
   display: flex;
   gap: 20px;
 }
@@ -45,4 +46,3 @@
   border-radius: 4px;
   cursor: pointer;
 }
-

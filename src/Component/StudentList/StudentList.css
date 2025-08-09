@@ -86,38 +86,3 @@
   font-size: 16px;
   color: var(--text-color);
 }
-
-@media (max-width: 768px) {
-  .student-search-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .student-search-container input,
-  .student-search-container select {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-image {
-    width: 70px;
-    height: 70px;
-  }
-  .student-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-data h3 {
-    font-size: 16px;
-  }
-
-  .profile-btn {
-    flex-direction: column;
-  }
-
-  .profile-btn button {
-    width: 100%;
-  }
-}

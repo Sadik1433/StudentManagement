@@ -55,6 +55,15 @@
   border: 1px solid var(--text-color);
   outline: none;
   cursor: pointer;
+  border: none;
   margin-left: 15px;
   gap: 20px;
+}
+.edit-btn{
+  color: whitesmoke;
+  background-color: green;
+}
+.delete-btn{
+  color: whitesmoke;
+  background-color: red;
 }

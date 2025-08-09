@@ -1,7 +1,7 @@
 .StudentManagementContainer {
   min-height: 100vh;
   background-color: var(--bg-color);
-  padding: 10px;
+  color:var(--text-color);
 }
 
 .AddStudentButtonContainer {
@@ -10,8 +10,8 @@
   z-index: 1000;
   width: 100%;
   right: 0px;
-  top: 60px;
-  padding: 15px 20px;
+  top: 50px;
+  padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -46,22 +46,4 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .AddStudentButtonContainer {
-    background-color: aqua;
-    padding: 10px;
-    justify-content: space-between;
-  }
-  .student-search-container{
-    width: 50%;
-    background-color: red;
-  }
-  
-.student-search-container input,
-.student-search-container select {
-  width: 150px;
-  background-color: yellow;
-}
 }
